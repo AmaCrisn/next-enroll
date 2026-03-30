@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --clr-primary: #003A8F;
+  --clr-primary-hover: #00245a;
+  --clr-primary-active: #002761;
+  --clr-primary-light: #3B82F6;
+  --clr-primary-soft: #EAF2FF;
+
+  --clr-accent: #FBBF24;
+  --clr-accent-hover: #F59E0B;
+  
+  --clr-ghost-hover: #ffffff1A;
+
+  --clr-bg-primary: #F8FAFC;
+  --clr-bg-secondary: #F1F5F9;
+  --clr-bg-utilities: #FFFFFF;
+
+  --clr-txt-primary: #0F172A;
+  --clr-txt-secondary: #64748B;
+
+  --clr-border: #E2E8F0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --clr-primary: #3B82F6;
+    --clr-primary-hover: #2563EB;
+    --clr-primary-active: #1D4ED8;
+
+    --clr-accent: #FBBF24;
+    --clr-accent-hover: #F59E0B;
+
+    --clr-ghost-hover: #003A8F5d;
+
+    --clr-bg-primary: #0B1220;
+    --clr-bg-secondary: #111827;
+    --clr-bg-card: #1F2937;
+    --clr-bg-input: #111827;
+
+    --clr-txt-primary: #F9FAFB;
+    --clr-txt-secondary: #9CA3AF;
+    --clr-txt-muted: #6B7280;
+
+    --clr-border: #374151;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--clr-bg-primary);
+  color: var(--clr-txt-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
