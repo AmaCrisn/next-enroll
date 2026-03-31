@@ -2,15 +2,17 @@
 
 :root {
   --clr-primary: #003A8F;
-  --clr-primary-hover: #00245a;
+  --clr-primary-hover: #003077;
   --clr-primary-active: #002761;
   --clr-primary-light: #3B82F6;
   --clr-primary-soft: #EAF2FF;
 
   --clr-accent: #FBBF24;
   --clr-accent-hover: #F59E0B;
+  --clr-accent-active: #da8e0b;
   
   --clr-ghost-hover: #ffffff1A;
+  --clr-ghost-active: #ffffff2c;
 
   --clr-bg-primary: #F8FAFC;
   --clr-bg-secondary: #F1F5F9;
@@ -37,6 +39,7 @@
     --clr-accent-hover: #F59E0B;
 
     --clr-ghost-hover: #003A8F5d;
+    --clr-ghost-active: #00398f80;
 
     --clr-bg-primary: #0B1220;
     --clr-bg-secondary: #111827;
