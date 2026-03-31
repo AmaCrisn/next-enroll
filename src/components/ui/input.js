@@ -41,9 +41,11 @@ export default function Input({ label, placeholder, type = "text", className, ..
 
       <div className="relative">
         {/* Left Icon */}
-        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-          {icons[type]}
-        </div>
+        {icons[type] && (
+          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+            {icons[type]}
+          </div>
+        )}
 
         {/* Input */}
         <input
