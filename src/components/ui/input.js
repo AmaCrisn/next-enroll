@@ -59,7 +59,7 @@ export default function Input({ label, placeholder, type = "text", className, ..
           <button
             type="button"
             onClick={() => setShow(!show)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:cursor-pointer"
           >
             {show ? (
               // Eye Off
