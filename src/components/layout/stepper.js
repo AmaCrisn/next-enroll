@@ -19,7 +19,7 @@ export default function stepper({ currentStep = 1 }) {
 
         {/* Progress line */}
         <div
-          className="h-3 bg-(--clr-bg-secondary) rounded-full transition-all duration-500 absolute top-0 left-0"
+          className="h-3 bg-(--clr-primary) rounded-full transition-all duration-500 absolute top-0 left-0"
           style={{
             width: `${((currentStep - 1) / (steps.length - 1)) * 100}%`,
           }}
@@ -34,8 +34,8 @@ export default function stepper({ currentStep = 1 }) {
         return (
           <div key={step} className="flex flex-col items-center z-10">
             <div
-              className={`w-12 h-12 flex items-center justify-center rounded-full font-bold
-          ${isActive ? "bg-(--clr-bg-secondary) text-white" : "bg-gray-300 text-black"}`}
+              className={`w-12 h-12 flex items-center justify-center rounded-full font-bold transition-all duration-300
+          ${isActive ? "bg-(--clr-primary) text-white" : "bg-gray-300 text-(--clr-txt-secondary)"}`}
             >
               {step}
             </div>
