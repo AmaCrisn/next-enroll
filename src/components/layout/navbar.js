@@ -10,7 +10,7 @@ export default function navbar() {
   return (
     <div>
       {/* Header */}
-      <nav className="bg-[var(--clr-primary)] text-white px-32 pt-6">
+      <nav className="bg-(--clr-primary) text-white px-32 pt-6">
         {/* Top Section - title and buttons*/}
         <div className="flex items-center justify-between mx-6 mb-3.5 font-semibold">
           {/* Title */}
@@ -38,13 +38,13 @@ export default function navbar() {
 
         {/* Bottom Section - navigation purposes */}
         <div className="flex gap-6 transition-all text-lg">
-          <Link href="/" className="px-4 py-2 rounded-t-md hover:bg-[var(--clr-primary-hover)] hover:cursor-pointer duration-300 ease-in-out">
+          <Link href="/" className="px-4 py-2 rounded-t-md hover:bg-(--clr-primary-hover) hover:cursor-pointer duration-300 ease-in-out">
             Beranda
           </Link>
-          <Link href="/informasi" className="px-4 py-2 rounded-t-md hover:bg-[var(--clr-primary-hover)] hover:cursor-pointer duration-300 ease-in-out">
+          <Link href="/informasi" className="px-4 py-2 rounded-t-md hover:bg-(--clr-primary-hover) hover:cursor-pointer duration-300 ease-in-out">
             Informasi Pendaftaran
           </Link>
-          <Link href="/dosen" className="px-4 py-2 rounded-t-md hover:bg-[var(--clr-primary-hover)] hover:cursor-pointer duration-300 ease-in-out">
+          <Link href="/dosen" className="px-4 py-2 rounded-t-md hover:bg-(--clr-primary-hover) hover:cursor-pointer duration-300 ease-in-out">
             Dosen
           </Link>
         </div>

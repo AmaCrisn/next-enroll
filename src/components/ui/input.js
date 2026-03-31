@@ -49,8 +49,8 @@ export default function Input({ label, placeholder, type = "text", ...props }) {
         <input
           type={type === "password" && show ? "text" : type}
           placeholder={placeholder}
-          className="w-full border-2 border-[var(--clr-border)] rounded-md py-2 pl-10 pr-10
-                     focus:outline-none focus:border-[var(--clr-primary)]"
+          className="w-full border-2 border-(--clr-border) rounded-md py-2 pl-10 pr-10
+                     focus:outline-none focus:border-(--clr-primary)"
           {...props}
         />
 

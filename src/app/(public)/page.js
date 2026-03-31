@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <div className="flex flex-col justify-center px-56 pt-9">
         {/* Image */}
-        <div className="w-full mx-6 flex mb-9 border-2 border-[var(--clr-border)] bg-[var(--clr-bg-card)] rounded-3xl shadow-lg">
+        <div className="w-full mx-6 flex mb-9 border-2 border-(--clr-border) bg-(--clr-bg-card) rounded-3xl shadow-lg">
           <div className="h-[73vh] w-1/2 relative rounded-l-3xl overflow-hidden group">
             <Image
               src="/GedungTrilogi.jpg"
@@ -22,7 +22,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/20" />
 
             {/* Gradient fade to blend with right side */}
-            <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-l from-black/40 via-transparent to-transparent" />
 
             {/* Optional text on image */}
             <div className="absolute bottom-6 left-6 text-white">
@@ -32,12 +32,12 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-between px-28 py-18 h-[73vh] w-1/2">
             <div>
-              <h2 className="text-6xl font-bold mb-2">Wujudkan Masa Depan Anda <span className="text-[var(--clr-primary)]">Bersama Kami</span></h2>
+              <h2 className="text-6xl font-bold mb-2">Wujudkan Masa Depan Anda <span className="text-(--clr-primary)">Bersama Kami</span></h2>
               <p className="text-xl font-extralight">Temukan berbagai program studi, kembangkan potensi Anda, dan mulai perjalanan akademik di lingkungan yang inspiratif.</p>
             </div>
 
             <div className="flex flex-col gap-5">
-              <Button variant="primary" className="w-full text-2xl">
+              <Button variant="primary" className="w-full text-xl">
                 Daftar Sekarang
               </Button>
 

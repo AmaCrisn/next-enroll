@@ -7,13 +7,13 @@ export default function Checkbox({ label, ...props }) {
 
       <div
         className="w-5 h-5 border-2 border-gray-400 rounded-md flex items-center justify-center
-        group-has-[:checked]:bg-[var(--clr-primary)]
-        group-has-[:checked]:border-[var(--clr-primary)]
+        group-has-checked:bg-(--clr-primary)
+        group-has-checked:border-(--clr-primary)
         transition-all"
       >
         <svg
           className="w-3 h-3 text-white opacity-0 
-          group-has-[:checked]:opacity-100 transition-all"
+          group-has-checked:opacity-100 transition-all"
           fill="none"
           stroke="currentColor"
           strokeWidth="3"
