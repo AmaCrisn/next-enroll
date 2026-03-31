@@ -1,3 +1,4 @@
+import Button from "@/components/ui/button";
 import Footer from "../../components/layout/footer";
 import Image from "next/image";
 
@@ -12,6 +13,7 @@ export default function Home() {
               src="/GedungTrilogi.jpg"
               alt="kampus"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
@@ -35,18 +37,18 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-5">
-              <button className="text-2xl text-white font-bold w-full py-3 bg-[var(--clr-primary)] hover:bg-[var(--clr-primary-hover)] rounded-md transition-all duration-300 ease-in-out hover:cursor-pointer">
+              <Button variant="primary" className="w-full text-2xl">
                 Daftar Sekarang
-              </button>
+              </Button>
 
               <div className="flex gap-5 text-lg font-semibold transition-all">
-                <button className="w-1/2 py-3 border-[var(--clr-primary)] hover:border-[var(--clr-primary-hover)] hover:bg-[var(--clr-primary-hover)] hover:text-white border-2 rounded-md duration-300 ease-in-out hover:cursor-pointer">
+                <Button variant="secondary" className="w-1/2">
                   Informasi Pendaftaran
-                </button>
+                </Button>
 
-                <button className="w-1/2 py-3 border-[var(--clr-primary)] hover:border-[var(--clr-primary-hover)] hover:bg-[var(--clr-primary-hover)] hover:text-white border-2 rounded-md duration-300 ease-in-out hover:cursor-pointer">
+                <Button variant="secondary" className="w-1/2">
                   Dosen
-                </button>
+                </Button>
               </div>
             </div>
           </div>
