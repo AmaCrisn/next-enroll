@@ -1,0 +1,84 @@
+'use client'
+
+import React, { useState } from "react";
+
+export default function Input({ label, placeholder, type = "text", ...props }) {
+  const [show, setShow] = useState(false);
+
+  const icons = {
+    email: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <path d="M4 6h16v12H4z" />
+        <path d="M4 6l8 6 8-6" />
+      </svg>
+    ),
+
+    password: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-5 h-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <rect x="5" y="11" width="14" height="10" rx="2" />
+        <path d="M7 11V7a5 5 0 0110 0v4" />
+      </svg>
+    ),
+  };
+
+  return (
+    <div className="mb-3">
+      {label && <h3 className="font-semibold mb-1.5">{label}</h3>}
+
+      <div className="relative">
+        {/* Left Icon */}
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          {icons[type]}
+        </div>
+
+        {/* Input */}
+        <input
+          type={type === "password" && show ? "text" : type}
+          placeholder={placeholder}
+          className="w-full border-2 border-[var(--clr-border)] rounded-md py-2 pl-10 pr-10
+                     focus:outline-none focus:border-[var(--clr-primary)]"
+          {...props}
+        />
+
+        {/* Show/Hide Password */}
+        {type === "password" && (
+          <button
+            type="button"
+            onClick={() => setShow(!show)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+          >
+            {show ? (
+              // Eye Off
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path d="M3 3l18 18" />
+                <path d="M10.58 10.58a3 3 0 004.24 4.24" />
+                <path d="M2 12s4 7 10 7a9.77 9.77 0 004.91-1.12" />
+                <path d="M22 12s-4-7-10-7a9.77 9.77 0 00-4.91 1.12" />
+              </svg>
+            ) : (
+              // Eye
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            )}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
