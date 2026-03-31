@@ -41,9 +41,9 @@ export default function stepper({ currentStep = 1 }) {
             </div>
 
             {/* Label */}
-              <p className={`mt-2 text-md text-center text-(--clr-txt-primary) ${isActive ? "font-bold" : "font-light"}`}>
-                {label}
-              </p>
+            <p className={`mt-2 text-md text-center text-(--clr-txt-primary) ${isActive ? "font-bold" : "font-light"}`}>
+              {label}
+            </p>
           </div>
         );
       })}
