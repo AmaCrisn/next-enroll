@@ -6,7 +6,7 @@ export default function Checkbox({ label, ...props }) {
       <input type="checkbox" className="hidden" {...props} />
 
       <div
-        className="w-5 h-5 border-2 border-gray-400 rounded-md flex items-center justify-center
+        className="w-5 h-5 shrink-0 border-2 border-gray-400 rounded-md flex items-center justify-center
         group-has-checked:bg-(--clr-primary)
         group-has-checked:border-(--clr-primary)
         transition-all"
