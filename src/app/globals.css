@@ -13,11 +13,12 @@
   
   --clr-ghost-hover: #ffffff1A;
   --clr-ghost-active: #ffffff2c;
-
+  
   --clr-bg-primary: #F8FAFC;
-  --clr-bg-secondary: #F1F5F9;
-  --clr-bg-utilities: #FFFFFF;
-
+  --clr-bg-secondary: #dde4eb;
+  --clr-bg-card: #FFFFFF;
+  --clr-bg-input: #FFFFFF;
+  
   --clr-txt-primary: #0F172A;
   --clr-txt-secondary: #64748B;
 
