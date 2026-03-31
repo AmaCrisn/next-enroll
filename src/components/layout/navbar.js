@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Button from "../../components/ui/button"
+import Button from "@/components/ui/button"
 import Image from "next/image";
 
 export default function navbar() {
@@ -30,7 +30,7 @@ export default function navbar() {
             <Button onClick={() => {router.push("/masuk")}} variant="ghost" className="px-10">
               Masuk
             </Button>
-            <Button onClick={() => {router.push("/daftar")}} variant="accent" className="px-10">
+            <Button onClick={() => {router.push("/daftar")}} variant="accent" className="px-10 text-(--clr-txt-active)">
               Daftar
             </Button>
           </div>
