@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-export default function SearchSelect({ options = [], placeholder, label, onChange }) {
+export default function SearchSelect({ options = [], placeholder, label, onChange, required = true }) {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(null);
   const [open, setOpen] = useState(false);
@@ -33,7 +33,7 @@ export default function SearchSelect({ options = [], placeholder, label, onChang
 
   return (
     <div className="mb-3">
-      {label && <h3 className="font-semibold mb-1.5">{label}</h3>}
+      {label && <h3 className="font-semibold mb-1.5">{label} {required === true && <span className="text-red-600 font-light">*</span>}</h3>}
 
       <div ref={containerRef} className="relative w-full">
         {/* Input */}

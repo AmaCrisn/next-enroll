@@ -7,6 +7,7 @@ export default function Select({
     placeholder = "Select an option",
     label,
     onChange,
+    required = true,
 }) {
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState(null);
@@ -32,7 +33,7 @@ export default function Select({
 
     return (
         <div className="mb-3">
-            {label && <h3 className="font-semibold mb-1.5">{label}</h3>}
+            {label && <h3 className="font-semibold mb-1.5">{label} {required === true && <span className="text-red-600 font-light">*</span>}</h3>}
 
             <div ref={containerRef} className="relative w-full">
                 {/* Trigger */}
