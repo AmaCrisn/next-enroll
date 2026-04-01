@@ -6,11 +6,12 @@ export default function stepper({ currentStep = 1 }) {
     "Biodata",
     "Pilihan Akademik",
     "Pengumpulan Berkas",
+    "Konfirmasi",
     "Selesai",
   ];
 
   return (
-    <div className="relative grid grid-cols-5 gap-4">
+    <div className="relative grid grid-cols-6 gap-4">
 
       <div className="absolute top-6 left-18 right-18 -translate-y-1/2">
 
