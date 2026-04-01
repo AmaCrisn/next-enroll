@@ -13,7 +13,7 @@ export default function Biodata({ biodataStep, setBiodataStep }) {
             <h2 className="font-bold text-center py-2.5 bg-(--clr-bg-secondary)">BIODATA</h2>
 
             <div className="grid grid-cols-2 gap-6 px-32">
-                <Button variant={biodataStep === "student" ? "primary" : "ghost"} onClick={()=> setBiodataStep("student")}>Student</Button>
+                <Button variant={biodataStep === "student" ? "primary" : "ghost"} onClick={()=> setBiodataStep("student")}>Mahasiswa</Button>
                 <Button variant={biodataStep === "parents" ? "primary" : "ghost"} onClick={()=> setBiodataStep("parents")}>Orang Tua</Button>
             </div>
 
