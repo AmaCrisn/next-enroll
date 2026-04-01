@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function SearchSelect({ options = [], placeholder, label, onChange }) {
   const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState(null);
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -11,21 +12,29 @@ export default function SearchSelect({ options = [], placeholder, label, onChang
     opt.label.toLowerCase().includes(query.toLowerCase())
   );
 
-  // Close dropdown if clicking outside
-  const handleClickOutside = (e) => {
-    if (containerRef.current && !containerRef.current.contains(e.target)) {
-      setOpen(false);
-    }
-  };
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setOpen(false);
 
-  // Add/remove event listener for clicks outside
-  if (typeof window !== "undefined") {
+        const match = options.find(
+          (opt) => opt.label.toLowerCase() === query.toLowerCase()
+        );
+
+        if (!match) {
+          setQuery(selected ? selected.label : "");
+        }
+      }
+    };
+
     window.addEventListener("click", handleClickOutside);
-  }
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, [query, options, selected]);
 
   return (
     <div className="mb-3">
       {label && <h3 className="font-semibold mb-1.5">{label}</h3>}
+
       <div ref={containerRef} className="relative w-full">
         {/* Input */}
         <input
@@ -49,6 +58,7 @@ export default function SearchSelect({ options = [], placeholder, label, onChang
                   key={opt.value}
                   onClick={() => {
                     setQuery(opt.label);
+                    setSelected(opt);
                     setOpen(false);
                     onChange?.(opt);
                   }}
@@ -58,7 +68,9 @@ export default function SearchSelect({ options = [], placeholder, label, onChang
                 </div>
               ))
             ) : (
-              <div className="px-3 py-2 text-gray-400">Tidak ditemukan</div>
+              <div className="px-3 py-2 text-gray-400">
+                Tidak ditemukan
+              </div>
             )}
           </div>
         )}
