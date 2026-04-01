@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export default function Input({ label, placeholder, type = "text", icon = true, className, ...props }) {
+export default function Input({ label, placeholder, type = "text", icon = true, required = true, className, ...props }) {
   const [show, setShow] = useState(false);
 
   const icons = {
@@ -63,7 +63,7 @@ export default function Input({ label, placeholder, type = "text", icon = true, 
 
   return (
     <div className="mb-3">
-      {label && <h3 className="font-semibold mb-1.5">{label}</h3>}
+      {label && <h3 className="font-semibold mb-1.5">{label} {required === true && <span className="text-red-600 font-light">*</span>}</h3>}
 
       <div className="relative">
         {/* Left Icon */}
