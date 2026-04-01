@@ -33,26 +33,26 @@ export default function ParentsForm() {
 
                     <Input type="text" label="Nama Lengkap" placeholder="Masukkan nama lengkap" />
                     <Select label={"Status Hidup"} options={alive} placeholder="Pilih status" />
-                    <Input type="date" label="Tanggal Lahir" placeholder={"01-01-2001"} />
-                    <Input type="number" label={"Nomor HP"} placeholder={"+62 1234567890"} onWheel={(e) => e.target.blur()} />
-                    <Input type="email" label={"Email"} placeholder={"Email"} />
-                    <Select label={"Status Kekerabatan"} options={kinship} placeholder="Pilih kekerabatan" />
-                    <Select label={"Pendidikan Terakhir"} options={education} placeholder="Pilih pendidikan" />
-                    <Input type="text" label={"Alamat"} placeholder={"Masukkan alamat"} />
-                    <Input type="number" label={"Penghasilan"} placeholder={"Masukkan penghasilan"} onWheel={(e) => e.target.blur()} icon={false} />
+                    <Input type="date" label="Tanggal Lahir" placeholder={"01-01-2001"} required={false} />
+                    <Input type="number" label={"Nomor HP"} placeholder={"+62 1234567890"} onWheel={(e) => e.target.blur()} required={false} />
+                    <Input type="email" label={"Email"} placeholder={"Email"} required={false} />
+                    <Select label={"Status Kekerabatan"} options={kinship} placeholder="Pilih kekerabatan" required={false} />
+                    <Select label={"Pendidikan Terakhir"} options={education} placeholder="Pilih pendidikan" required={false} />
+                    <Input type="text" label={"Alamat"} placeholder={"Masukkan alamat"} required={false} />
+                    <Input type="number" label={"Penghasilan"} placeholder={"Masukkan penghasilan"} onWheel={(e) => e.target.blur()} icon={false} required={false} />
                 </div>
                 <div>
                     <h3 className="mb-4 pb-1.5 text-xl font-semibold border-b-4 border-(--clr-border)">Biodata Ibu</h3>
 
                     <Input type="text" label="Nama Lengkap" placeholder="Masukkan nama lengkap" />
                     <Select label={"Status Hidup"} options={alive} placeholder="Pilih status" />
-                    <Input type="date" label="Tanggal Lahir" placeholder={"01-01-2001"} />
-                    <Input type="number" label={"Nomor HP"} placeholder={"+62 1234567890"} onWheel={(e) => e.target.blur()} />
-                    <Input type="email" label={"Email"} placeholder={"Email"} />
-                    <Select label={"Status Kekerabatan"} options={kinship} placeholder="Pilih kekerabatan" />
-                    <Select label={"Pendidikan Terakhir"} options={education} placeholder="Pilih pendidikan" />
-                    <Input type="text" label={"Alamat"} placeholder={"Masukkan alamat"} />
-                    <Input type="number" label={"Penghasilan"} placeholder={"Masukkan penghasilan"} onWheel={(e) => e.target.blur()} icon={false} />
+                    <Input type="date" label="Tanggal Lahir" placeholder={"01-01-2001"} required={false} />
+                    <Input type="number" label={"Nomor HP"} placeholder={"+62 1234567890"} onWheel={(e) => e.target.blur()} required={false} />
+                    <Input type="email" label={"Email"} placeholder={"Email"} required={false} />
+                    <Select label={"Status Kekerabatan"} options={kinship} placeholder="Pilih kekerabatan" required={false} />
+                    <Select label={"Pendidikan Terakhir"} options={education} placeholder="Pilih pendidikan" required={false} />
+                    <Input type="text" label={"Alamat"} placeholder={"Masukkan alamat"} required={false} />
+                    <Input type="number" label={"Penghasilan"} placeholder={"Masukkan penghasilan"} onWheel={(e) => e.target.blur()} icon={false} required={false} />
                 </div>
             </div>
         </div>
