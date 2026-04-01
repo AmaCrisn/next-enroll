@@ -12,9 +12,9 @@ export default function Home() {
 
         <form className="flex flex-col gap-4 mb-10">
           {/* Email */}
-          <Input type="email" label="Email" placeholder="contoh@gmail.com"/>
+          <Input type="email" label="Email" placeholder="contoh@gmail.com" required={false} />
           {/* Password */}
-          <Input type="password" label="Password" placeholder="Masukkan password"/>
+          <Input type="password" label="Password" placeholder="Masukkan password" required={false}/>
           {/* Remember me */}
           <div className="flex items-center justify-between gap-3 px-2 text-sm">
             <Checkbox label="Ingat saya" />
